@@ -1,0 +1,114 @@
+
+\chapter{Introducción}
+
+El presente proyecto consiste en resolver la necesidad de herramientas mas accesibles en la generación procedural de mapas en el desarrollo de videojuegos
+\\\\ %esto es salto de linea
+
+%------------------------------------------------------------%
+\section{Antecedentes}
+
+El desarrollo de videojuegos es un área en crecimiento mas accesible de ingresar gracias a la facilidad que generan el uso de motores de juegos, y herramientas para estos generados por sus respectivas comunidades.
+
+A pesar de todos los beneficios de usar un motor de videojuegos como base para el desarrollo, hacer videojuegos es actualmente una tarea que demanda de muchos aspectos en los que trabajar por lo que se puede terminar tomando mucho tiempo en terminar de implementar todos los aspectos necesarios que lo involucra
+
+Entre las necesidades mas comunes para un desarrollador de videojuegos es la creación de mapas que puede ser una tarea tardía, por lo que muchos proyecto pequeños optan por la generación automática de estos por diferentes métodos
+
+
+
+\emph{cita ejemplo}
+\citep{cappuchino}
+\\\\
+
+%------------------------------------------------------------%
+\section{Descripción del problema}
+
+Un videojuego es un proyecto pesado que incluye muchas áreas a desarrollar entre ellos diseñar el mapa de los niveles así que para aligerar la carga los desarrolladores pueden usar Assets.
+
+Un Asset es como una biblioteca que puede incluir scripts de código, imágenes, modelos 3D/2D, etc disponibles a usar para un nuevo proyecto, estos suelen estar publicados para proyectos usando algún motor de videojuegos especifico para ser compatible.
+
+
+
+
+%------------------------------------------------------------%
+
+\subsection{Definición del Problema}
+Dificultad para la generación de mapas en en videojuegos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/Screenshot_20240819_191212.png}
+    \caption{Árbol de problemas, centrado el la generación de mapas para videojuegos.}
+    \label{fig:arbol-de-problemas}
+\end{figure}
+%------------------------------------------------------------%
+\section{Objetivos}
+A continuación se presentan el objetivo general y los objetivos específicos en este proyecto de grado.  
+\subsection{Objetivo general}
+Desarrollar un Asset para facilitar la creación procedural de mapas tipo mosaico 2D y 3D a desarrolladores de videojuegos
+
+ 
+
+\subsection{Objetivos específicos}
+\begin{enumerate}
+\item Investigar la técnica de wave function colapse para la generación de mapas
+
+\item Investigar la técnica de seeding/semillas para añadir control y reproducibilidad de los mapas resultados generados
+
+\item Investigar un motor de videojuegos para implementar un Asset compatible con esa tecnología
+
+\item Implementar la funcionalidad de generación de mapas compatible con las herramientas del motor de videojuegos
+
+\item Definir casos de uso para las pruebas de la funcionalidad
+
+\item Hacer el Asset publico para cualquier desarrollador de videojuegos
+
+
+\end{enumerate}
+%------------------------------------------------------------%
+\section{Justificación}
+
+Como se menciono en puntos anteriores hacer videojuegos es un tarea pesada, entre las necesidades mas comunes para un desarrollador de videojuegos es la creación de mapas, para aligerar tal carga se busca publicar un Asset que ayude a desarrolladores a facilitar esa área del desarrollo de videojuegos.
+
+%------------------------------------------------------------%
+\section{Límites y alcances}
+El presente trabajo de grado se enfoca en los siguientes aspectos:
+\begin{itemize}
+\item 
+\item 
+\item 
+\item 
+\end{itemize} 
+  
+
+%------------------------------------------------------------%
+\section{Metodología de desarrollo}
+
+Al momento de avanzar en el procedimiento se definió que el proceso a seguir necesitaría ser un proceso ágil para poder avanzar evitando interrupciones y acomodarse a necesidades surgientes en el desarrollo.
+Entre los procesos ágiles conocidos se eligió kanban por el echo de poder amoldarse al trabajo en solitario requerido y ser flexible con flujo de trabajo para evitar posibles atascos.
+Las tareas principales de investigación que se definió serían las siguientes:
+
+\begin{table}[H]
+    \centering
+\caption{Cronograma de actividades}
+\label{tab:actvd}
+\begin{tabular}{|>{\centering\arraybackslash}p{0.14\linewidth}|>{\centering\arraybackslash}p{0.24\linewidth}|>{\centering\arraybackslash}p{0.24\linewidth}|>{\centering\arraybackslash}p{0.24\linewidth}|}
+\hline 
+    
+        Nro. Objetivo Específico & Actividades & Recursos Necesarios &Resultados a obtener \\ \hline 
+    
+         1& Investigación de la implementación de las técnicas wave function collapse y seeding &  & Diseño de algoritmos a usar\\ \hline 
+    
+         2& Investigación del motor a usar y herramientas para generar mapas & lenguaje de programación compatible con el motor & Diseño de uso en el motor y herramientas a usar de este\\ \hline 
+         
+         3& Diseñar y desarrollar biblioteca de generación de mapas & lenguaje de programación compatible con el motor &biblioteca de generación de mapas \\ \hline
+    
+         4& Desarrollar pruebas para la biblioteca creada & Motor y biblioteca de unit test & conjunto de test de unidad \\ \hline 
+    
+         5& publicar Asset implementado & Motor, biblioteca de generación de mapas & Asset \\ \hline 
+    
+    
+
+    \end{tabular}
+\end{table}
+
+    Gran parte de los puntos no requieren la totalidad de la investigación de puntos anteriores así que se irán generando tareas a cumplir según lo de lo que ya no se tenga bloqueos para su desarrollo.

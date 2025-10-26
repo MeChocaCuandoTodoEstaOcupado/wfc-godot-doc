@@ -1,0 +1,44 @@
+
+%formato del texto "capitulo"
+\titleformat{\chapter}[display]
+{\fontsize{14}{16}\Large\filcenter} 
+{{\chaptertitlename} \Roman{chapter}} %  
+{20pt}  % Espacio entre "Capítulo I" y el título
+{\bfseries\MakeUppercase} 
+
+% Formato de títulos y subtítulos
+\titleformat{\section}
+  {\fontsize{12}{14}\bfseries\uppercase} % Estilo del título de sección
+  {\thesection} % Etiqueta del capítulo
+  {1em} % Espacio horizontal entre la etiqueta y el título
+  {} % Código previo al título de sección
+
+\titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\bfseries}{\thesubsubsection}{1em}{}
+
+%formato indice
+\renewcommand{\cftchapfont}{\bfseries\uppercase} %capitulos
+\renewcommand{\cftsecfont}{\uppercase} % Secciones
+
+
+% agrega puntos ... a los capitulos preliminares en el indice
+%\renewcommand{\cftchapdotsep}{\cftdotsep}
+
+% Formato de párrafo
+\setlength{\parindent}{0pt} % Sin sangría
+\setlength{\parskip}{6pt} % Espaciado entre párrafos
+
+% Configuración de página
+\pagestyle{fancy} % Estilo de página fancy
+\fancyhf{} % Borra todos los encabezados y pies de página actuales
+\fancyfoot[C]{\thepage} % Número de página centrado en el pie de página
+\renewcommand{\headrulewidth}{0pt} % Sin línea de encabezado
+\renewcommand{\footrulewidth}{0pt} % Sin línea de pie de página
+
+
+% Formato de figuras
+\captionsetup{justification=centering, font={footnotesize, sf}, labelfont={bf, sf}}
+
+
+% Configuracion del caption
+\captionsetup[table]{skip=4mm}

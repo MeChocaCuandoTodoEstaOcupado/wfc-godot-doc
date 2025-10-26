@@ -1,0 +1,79 @@
+
+\chapter{MARCO TEÓRICO}
+
+En este capítulo se explican los conceptos de los mapas estilo mosaico y las técnicas a usar para poder generarlos procedural-mente, también se profundizara en la tecnología de los motores de videojuegos a usar
+ \footnote{métodos adaptativos: métodos basados en la estimación del error } 
+.
+
+
+\section{MAPAS ESTILO MOSAICO O TILEMAPS}
+
+Los mapas estilo mosaico o también llamados tilemaps son una técnica común en el desarrollo de videojuegos especialmente en juegos 2D, que consiste en construir el mapa del mundo o nivel de juego a base de pequeñas imágenes con forma usualmente cuadrada a los que se les llaman mosaicos o tiles,
+los beneficios de usar esto es que no necesitar grandes imágenes que pueden pesar mucho en cambio se construye usando pequeñas imágenes que se pueden repetir varias vecen el diferentes partes del mapa.
+
+Otro beneficio de esto es que se pueden poner en matrices de 2 y 3 dimensiones lo que hace sencillo poder definir las posiciones de los tiles usando algoritmos.
+
+En el caso de mapas 3D se usan modelos 3D  o también llamados 3D mesh, en vez de imágenes  obteniendo los mismos beneficios.
+
+
+\section{WAVE FUNCTION COLLAPSE}
+
+El colapso de la función de onda o wave function collapse es un algoritmo basado en un concepto de física cuántica con el mismo nombre. Cuando se mide un sistema cuando en superposición de estados su función de onda se colapsa a un solo estado, por lo que se considera el estado es indeterminado hasta que se haga una medición, experimentos conocidos de este fenómeno son el gato de Schrödinger o el experimento de la doble rendija.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/screenshot-2025-10-26_10-24-06.png}
+	\caption{experimento de la doble rendija.}
+	\label{fig:doble-rendija}
+\end{figure}
+
+\subsection{Algoritmos genéticos paralelos y distribuidos (PGA , DGA)}
+\subsection{Algoritmos genéticos híbridos (HGA)}
+\subsection{Algoritmos genéticos adaptativos (AGA)}
+\subsection{Algoritmos genéticos rápido desordenado (FmGA)}
+\subsection{Algoritmos genéticos muestreo independiente (ISGA)}
+\section{APLICACIONES ACTUALES EN BASE A ALGORITMOS GENÉTICOS}
+El uso de algoritmos genéticos ha estado subiendo exponencialmente en los últimos años. Los algoritmos genéticos son usados en su mayoría para los problemas de optimización y la resolución de problemas NP difíciles.
+Una de las áreas donde se puede ver a los algoritmos genéticos ser aplicado es el aprendizaje de máquinas, Velez-Langs Oswaldo  y Santos Carlos (2014)  usaron algoritmos genéticos para su implementación de un sistema recomendador, que demostró su correctitud en la recomendación de películas al usuario. Lars Bungum y Björn Gambäck (2010) demostraron que la programación evolutiva puede ser efectivamente usada en las diferentes etapas del procesamiento del lenguaje natural.
+
+\section{MOTORES DE VIDEOJUEGOS}
+
+Usar motores de videojuegos como base de un proyecto es actualmente lo mas frecuente en el desarrollo de videojuegos ya que bastante costoso implementar desde 0 todas las funciones que aportan estos.
+
+Por lo que los Assets necesitan ser compatibles con el motor de videojuegos que se elija usar entre ellos las opciones mas conocidas y completas serian Unity y Unreal
+
+Unity y Unreal son motores de videojuegos los cuales han estado dominando la industria por un buen tiempo por lo cual tienen un buen repertorio de Assets publicados dando varias opciones a nuevos desarrolladores, aparte de estos hay varios otros motores entre los cuales uno adquirió popularidad recientemente Godot.
+
+Godot es un motor de videojuegos gratuito de código abierto creado originalmente en Argentina por Ariel Manzur y Juan Linietsky como un proyecto cerrado el cual pasaría a lanzarse como código abierto el 14 de enero de 2014 con licencia MIT
+Aunque adquirió popularidad rápidamente el aporte de la comunidad es bastante pequeño comparado con otros motores que llevan mas tiempo encabezando el mercado.
+
+Una gran ventaja de usar Godot por encima de motores como Unity y Unreal es que es completamente gratuito por lo que desarrolladores no necesitan pagar licencias para publicar sus juegos, también que al ser código abierto no esta sujeto a las políticas de ninguna compañía por lo que se puede tener mas libertad creativa.
+
+Otra ventaja de Godot es que al poder usar el mismo lenguaje de programación C\# usado en Unity y Unreal estos proyectos serian mas fáciles de exportarse a este nuevo motor de ser necesario y viceversa.
+
+\section{ESTADO DEL ARTE}
+\section{TECNOLOGÍAS}
+\subsection{Lenguaje de programación}
+
+Para lograr el cometido se eligió el lenguaje de programación Java por múltiples motivos que veremos a continuación.\\\\
+Java es un lenguaje popular que fue publicado en 1995 por Sun Microsystems, entre las ventajas que tiene es que es un lenguaje moderadamente fácil de entender y mantiene un alto rendimiento.
+Al ser uno de los lenguajes más populares que existen java cuenta con una comunidad grande y extensa documentación disponible para usar, tambien le da el beneficio de tener una basta cantidad de frameworks y diferentes bibliotecas hechas para este lenguaje. de las cuales veremos a continuación las que se eligió para llevar a cabo este proyecto.
+
+\subsection{Spring}
+
+Spring es un framework para Java posiblemente el más popular en la actualidad que ofrece varias herramientas al desarrollador para poder simplificar bastante el trabajo en la creación de aplicaciones web.
+Spring es bastante modular permitiendo solo importar las librerías relevantes para el trabajo.\\\\
+En este proyecto se busca poder usar Spring para poder dar un API capaz de ser usado para poder dar los resultados a los estudiantes de los horarios que desean optimizar y también pueda dar un sistema con un mínimo aceptable de seguridad a los administradores para popular la información necesaria de los horarios.
+
+\subsection{Jenetics}
+Jenetics es una biblioteca para java que implementa varios de los conceptos de algoritmos evolutivos y utiliza la funcionalidad de Stream de java para la iteración de generaciones, lo que permite concentrarse en la resolución del problema de este proyecto que es la optimización de los horarios elegidos por estudiantes, que principalmente radica en la definición de la función fitness.
+
+\subsection{Base de datos}
+Para el almacenamiento de información necesaria en este proyecto se eligió utilizar mysql por su sencillez popularidad y estabilidad.
+
+\subsection{Angular}
+En cuanto la interfaz de usuario se utilizó Angular al ser un framework bastante completo y robusto, conteniendo todo lo necesario para las necesidades de este proyecto.
+\section{PROCESO DE DESARROLLO}
+Como se mencionó en el anterior capítulo este proyecto estará desarrollado usando el proceso ágil conocido como Kanban. en los siguientes puntos se profundizará más respecto al proceso y el motivo de su elección
+\subsection{Kanban}
+\subsection{Por qué no otros procesos}

@@ -1,0 +1,66 @@
+\documentclass[11pt,letterpaper]{book}
+
+% Paquetes
+\usepackage[ left=3cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[spanish]{babel}
+%\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage[Lenny]{fncychap}
+\usepackage{hyperref}
+\usepackage{fancyhdr} % Para encabezados y pies de página
+\usepackage{tocloft}
+
+
+% Paquete para evitar pies de página, encabezados y numeración por defecto.
+\usepackage{emptypage}
+% Fuente Arial
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Paquetes para el uso de fórmulas matemáticas.
+\usepackage{amsmath, amsthm, amssymb}
+
+% paquetes para figuras
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{array} % required for text wrapping in tables
+\usepackage{float}
+
+% formato bibliografia
+\usepackage{natbib}
+\usepackage{url}
+% Paquete para el espaciado automático entre párrafos
+% ya no es necesario el "//"
+\usepackage{parskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% aqui comienza el documento %%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\include{config/config}
+
+% caratula/portada
+\include{preliminares/portada}
+
+% indices
+\frontmatter
+    \include{preliminares/dedicatoria}
+    \include{preliminares/agradecimientos}
+    \include{preliminares/fichaResumen}
+    \tableofcontents
+    \listoffigures
+    \listoftables
+    
+\mainmatter
+    \include{cuerpo_del_trabajo/1.introduccion}
+    \include{cuerpo_del_trabajo/2.marco_teorico}
+    \include{cuerpo_del_trabajo/3.marco_de_aplicacion}
+    \include{cuerpo_del_trabajo/4.desarrollo_del_proyecto}
+    \include{cuerpo_del_trabajo/5.conclusiones_y_recomendaciones}
+ 
+\backmatter
+    \include{bibliografia}
+    \include{anexos/anexos}
+
+\end{document}
