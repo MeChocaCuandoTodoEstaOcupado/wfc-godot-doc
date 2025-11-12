@@ -14,24 +14,20 @@
 \contentsline {section}{\numberline {1.6}Metodología de desarrollo}{3}{section.1.6}%
 \contentsline {chapter}{\numberline {2}MARCO TEÓRICO}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}MAPAS ESTILO MOSAICO O TILEMAPS}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}WAVE FUNCTION COLLAPSE}{5}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Algoritmos genéticos paralelos y distribuidos (PGA , DGA)}{6}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Algoritmos genéticos híbridos (HGA)}{6}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Algoritmos genéticos adaptativos (AGA)}{6}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Algoritmos genéticos rápido desordenado (FmGA)}{6}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Algoritmos genéticos muestreo independiente (ISGA)}{6}{subsection.2.2.5}%
-\contentsline {section}{\numberline {2.3}APLICACIONES ACTUALES EN BASE A ALGORITMOS GENÉTICOS}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}MOTORES DE VIDEOJUEGOS}{6}{section.2.4}%
-\contentsline {section}{\numberline {2.5}ESTADO DEL ARTE}{7}{section.2.5}%
-\contentsline {section}{\numberline {2.6}TECNOLOGÍAS}{7}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Lenguaje de programación}{7}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Spring}{7}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Jenetics}{7}{subsection.2.6.3}%
-\contentsline {subsection}{\numberline {2.6.4}Base de datos}{8}{subsection.2.6.4}%
-\contentsline {subsection}{\numberline {2.6.5}Angular}{8}{subsection.2.6.5}%
-\contentsline {section}{\numberline {2.7}PROCESO DE DESARROLLO}{8}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Kanban}{8}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Por qué no otros procesos}{8}{subsection.2.7.2}%
+\contentsline {section}{\numberline {2.2}SCP O PROBLEMAS DE SATISFACCIÓN DE RESTRICCIONES}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Algoritmo AC-3}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4}WAVE FUNCTION COLLAPSE}{6}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}ejemplo subseccion}{7}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.5}MOTORES DE VIDEOJUEGOS}{7}{section.2.5}%
+\contentsline {section}{\numberline {2.6}ESTADO DEL ARTE}{8}{section.2.6}%
+\contentsline {section}{\numberline {2.7}TECNOLOGÍAS}{8}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Lenguaje de programación}{8}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Godot}{8}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}}{8}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}GIT-GITHUB}{8}{subsection.2.7.4}%
+\contentsline {section}{\numberline {2.8}PROCESO DE DESARROLLO}{8}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Kanban}{8}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Por qué no otros procesos}{8}{subsection.2.8.2}%
 \contentsline {chapter}{\numberline {3}MARCO DE APLICACIÓN}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}subtitulo}{9}{section.3.1}%
 \contentsline {section}{\numberline {3.2}subtitulo}{9}{section.3.2}%
@@ -41,11 +37,8 @@
 \contentsline {subsection}{\numberline {3.4.1}Herramientas de software}{9}{subsection.3.4.1}%
 \contentsline {chapter}{\numberline {4}DESARROLLO DEL PROYECTO}{11}{chapter.4}%
 \contentsline {section}{\numberline {4.1}DISEÑO DE ARQUITECTURA}{11}{section.4.1}%
-\contentsline {section}{\numberline {4.2}DISEÑO DE ALGORITMO GENÉTICO}{12}{section.4.2}%
-\contentsline {section}{\numberline {4.3}DISEÑO DE BASE DE DATOS}{12}{section.4.3}%
-\contentsline {section}{\numberline {4.4}DISEÑO DE INTERFAZ DE USUARIO}{12}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Conclusiones y Recomendaciones}{15}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Subtitulo}{15}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Subsubtitulo}{15}{subsection.5.1.1}%
-\contentsline {chapter}{Bibliografía}{17}{subsection.5.1.1}%
-\contentsline {chapter}{Anexos}{17}{chapter*.12}%
+\contentsline {chapter}{\numberline {5}Conclusiones y Recomendaciones}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Subtitulo}{13}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Subsubtitulo}{13}{subsection.5.1.1}%
+\contentsline {chapter}{Bibliografía}{15}{subsection.5.1.1}%
+\contentsline {chapter}{Anexos}{15}{chapter*.9}%

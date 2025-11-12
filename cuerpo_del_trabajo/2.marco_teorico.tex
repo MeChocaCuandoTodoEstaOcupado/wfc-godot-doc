@@ -2,7 +2,7 @@
 \chapter{MARCO TEÓRICO}
 
 En este capítulo se explican los conceptos de los mapas estilo mosaico y las técnicas a usar para poder generarlos procedural-mente, también se profundizara en la tecnología de los motores de videojuegos a usar
- \footnote{métodos adaptativos: métodos basados en la estimación del error } 
+ \footnote{footnote: ejemplo } 
 .
 
 
@@ -15,10 +15,47 @@ Otro beneficio de esto es que se pueden poner en matrices de 2 y 3 dimensiones l
 
 En el caso de mapas 3D se usan modelos 3D  o también llamados 3D mesh, en vez de imágenes  obteniendo los mismos beneficios.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/Tilemap.jpg}
+	\caption{herramienta de tilemap de Unity}
+	\label{fig:tilemap}
+\end{figure}
+
+cada grilla de la matriz del mapa pudiera definirse de forma manual pero esta tarea se volvería muy pesada rápidamente en mapas grandes, por ello se busca implementar una forma de definir la matriz de forma procedural.
+
+\section{SCP O PROBLEMAS DE SATISFACCIÓN DE RESTRICCIONES}
+
+Para generar un mapa como este es importante que el resultado tenga coherencia, eso significa que hay grillas que si tienen cierto valor deberían de estar rodeadas solo de otros valores coherentes.
+
+Dado lo anterior mencionado generar estos resultado entra en la categoría de problemas de satisfacción de restricciones, estos se definen como problemas matemáticos definidos como un conjunto de objetos tal que su estado debe satisfacer un número de restricciones o limitaciones.
+
+\section{Algoritmo AC-3}
+
+AC-3 o Arc Consistency 3, es un algoritmo conocido para la solución de problemas de satisfacción de restricciones, es la tercera iteración de esta familia de algoritmos, este en particular desarrollado por Alan Mackworth en 1977
+
+\begin{itemize}
+	\item Se empieza definiendo una lista con 2 valores por cada arista.
+	\item Mientras la lista no este vaciá:
+	\begin{itemize}
+		\item remover una arista A a B.
+		\item Por cada valor del dominio de B:
+		\begin{itemize}
+			\item Busca un apoyo a ese valor dada la restricción de la arista 
+			\item Si ningún apoyo es encontrado:
+			\begin{itemize}
+			\item Remover el valor del dominio de B
+			\item Añadir aristas a la lista de B a cada otra variable con la que contenga una restricción aparte de A
+			\end{itemize}
+		\end{itemize}
+	\end{itemize} 
+\end{itemize}
+
+
 
 \section{WAVE FUNCTION COLLAPSE}
 
-El colapso de la función de onda o wave function collapse es un algoritmo basado en un concepto de física cuántica con el mismo nombre. Cuando se mide un sistema cuando en superposición de estados su función de onda se colapsa a un solo estado, por lo que se considera el estado es indeterminado hasta que se haga una medición, experimentos conocidos de este fenómeno son el gato de Schrödinger o el experimento de la doble rendija.
+El colapso de la función de onda o wave function collapse es una implementación basada en AC-3 pero inspirado en un concepto de física cuántica con el mismo nombre. Cuando se mide un sistema cuando en superposición de estados su función de onda se colapsa a un solo estado, por lo que se considera el estado es indeterminado hasta que se haga una medición, como referencia un experimento conocidos de este fenómeno es el experimento de la doble rendija.
 
 \begin{figure}[H]
 	\centering
@@ -27,14 +64,19 @@ El colapso de la función de onda o wave function collapse es un algoritmo basad
 	\label{fig:doble-rendija}
 \end{figure}
 
-\subsection{Algoritmos genéticos paralelos y distribuidos (PGA , DGA)}
-\subsection{Algoritmos genéticos híbridos (HGA)}
-\subsection{Algoritmos genéticos adaptativos (AGA)}
-\subsection{Algoritmos genéticos rápido desordenado (FmGA)}
-\subsection{Algoritmos genéticos muestreo independiente (ISGA)}
-\section{APLICACIONES ACTUALES EN BASE A ALGORITMOS GENÉTICOS}
-El uso de algoritmos genéticos ha estado subiendo exponencialmente en los últimos años. Los algoritmos genéticos son usados en su mayoría para los problemas de optimización y la resolución de problemas NP difíciles.
-Una de las áreas donde se puede ver a los algoritmos genéticos ser aplicado es el aprendizaje de máquinas, Velez-Langs Oswaldo  y Santos Carlos (2014)  usaron algoritmos genéticos para su implementación de un sistema recomendador, que demostró su correctitud en la recomendación de películas al usuario. Lars Bungum y Björn Gambäck (2010) demostraron que la programación evolutiva puede ser efectivamente usada en las diferentes etapas del procesamiento del lenguaje natural.
+La implementación de wave function collapse se usa principalmente para la generación procedural de bitmaps usando un bitmap de ejemplo como entrada
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/wfc.png}
+	\caption{wave function collapse ejemplo.}
+	\label{fig:wfc-ejemplo}
+\end{figure}
+
+
+
+
+\subsection{ejemplo subseccion}
 
 \section{MOTORES DE VIDEOJUEGOS}
 
@@ -55,24 +97,20 @@ Otra ventaja de Godot es que al poder usar el mismo lenguaje de programación C\
 \section{TECNOLOGÍAS}
 \subsection{Lenguaje de programación}
 
-Para lograr el cometido se eligió el lenguaje de programación Java por múltiples motivos que veremos a continuación.\\\\
-Java es un lenguaje popular que fue publicado en 1995 por Sun Microsystems, entre las ventajas que tiene es que es un lenguaje moderadamente fácil de entender y mantiene un alto rendimiento.
-Al ser uno de los lenguajes más populares que existen java cuenta con una comunidad grande y extensa documentación disponible para usar, tambien le da el beneficio de tener una basta cantidad de frameworks y diferentes bibliotecas hechas para este lenguaje. de las cuales veremos a continuación las que se eligió para llevar a cabo este proyecto.
+C\#
 
-\subsection{Spring}
+\subsection{Godot}
 
-Spring es un framework para Java posiblemente el más popular en la actualidad que ofrece varias herramientas al desarrollador para poder simplificar bastante el trabajo en la creación de aplicaciones web.
-Spring es bastante modular permitiendo solo importar las librerías relevantes para el trabajo.\\\\
-En este proyecto se busca poder usar Spring para poder dar un API capaz de ser usado para poder dar los resultados a los estudiantes de los horarios que desean optimizar y también pueda dar un sistema con un mínimo aceptable de seguridad a los administradores para popular la información necesaria de los horarios.
+Godot
 
-\subsection{Jenetics}
-Jenetics es una biblioteca para java que implementa varios de los conceptos de algoritmos evolutivos y utiliza la funcionalidad de Stream de java para la iteración de generaciones, lo que permite concentrarse en la resolución del problema de este proyecto que es la optimización de los horarios elegidos por estudiantes, que principalmente radica en la definición de la función fitness.
+\subsection{}
 
-\subsection{Base de datos}
-Para el almacenamiento de información necesaria en este proyecto se eligió utilizar mysql por su sencillez popularidad y estabilidad.
 
-\subsection{Angular}
-En cuanto la interfaz de usuario se utilizó Angular al ser un framework bastante completo y robusto, conteniendo todo lo necesario para las necesidades de este proyecto.
+
+\subsection{GIT-GITHUB}
+
+
+
 \section{PROCESO DE DESARROLLO}
 Como se mencionó en el anterior capítulo este proyecto estará desarrollado usando el proceso ágil conocido como Kanban. en los siguientes puntos se profundizará más respecto al proceso y el motivo de su elección
 \subsection{Kanban}

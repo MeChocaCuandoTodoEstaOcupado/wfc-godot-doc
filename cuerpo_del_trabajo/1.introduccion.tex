@@ -22,9 +22,9 @@ Entre las necesidades mas comunes para un desarrollador de videojuegos es la cre
 %------------------------------------------------------------%
 \section{Descripción del problema}
 
-Un videojuego es un proyecto pesado que incluye muchas áreas a desarrollar entre ellos diseñar el mapa de los niveles así que para aligerar la carga los desarrolladores pueden usar Assets.
+Un videojuego es un proyecto pesado que incluye muchas áreas a desarrollar entre ellos diseñar el mapa de los niveles así que para aligerar la carga los desarrolladores pueden usar Assets de terceros.
 
-Un Asset es como una biblioteca que puede incluir scripts de código, imágenes, modelos 3D/2D, etc disponibles a usar para un nuevo proyecto, estos suelen estar publicados para proyectos usando algún motor de videojuegos especifico para ser compatible.
+En el desarrollo de videojuegos un Asset son los recursos que se utiliza como modelos 3D, musica, código entre otros. Estos suelen estar publicados para proyectos usando algún motor de videojuegos especifico para ser compatible.
 
 
 
@@ -36,7 +36,7 @@ Dificultad para la generación de mapas en en videojuegos.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{img/Screenshot_20240819_191212.png}
+    \includegraphics[width=0.6\textwidth]{img/arbolproblema.png}
     \caption{Árbol de problemas, centrado el la generación de mapas para videojuegos.}
     \label{fig:arbol-de-problemas}
 \end{figure}
@@ -50,7 +50,7 @@ Desarrollar un Asset para facilitar la creación procedural de mapas tipo mosaic
 
 \subsection{Objetivos específicos}
 \begin{enumerate}
-\item Investigar la técnica de wave function colapse para la generación de mapas
+\item Investigar algoritmos para la generación de mapas
 
 \item Investigar la técnica de seeding/semillas para añadir control y reproducibilidad de los mapas resultados generados
 
@@ -83,8 +83,8 @@ El presente trabajo de grado se enfoca en los siguientes aspectos:
 %------------------------------------------------------------%
 \section{Metodología de desarrollo}
 
-Al momento de avanzar en el procedimiento se definió que el proceso a seguir necesitaría ser un proceso ágil para poder avanzar evitando interrupciones y acomodarse a necesidades surgientes en el desarrollo.
-Entre los procesos ágiles conocidos se eligió kanban por el echo de poder amoldarse al trabajo en solitario requerido y ser flexible con flujo de trabajo para evitar posibles atascos.
+Al momento de avanzar en el procedimiento se definió que el proceso a seguir necesitaría ser un proceso ágil para poder avanzar evitando interrupciones y acomodarse a necesidades surgentes en el desarrollo.
+Entre los procesos ágiles conocidos se eligió Kanban por el echo de poder amoldarse al trabajo en solitario requerido y ser flexible con flujo de trabajo para evitar posibles atascos.
 Las tareas principales de investigación que se definió serían las siguientes:
 
 \begin{table}[H]
@@ -96,7 +96,7 @@ Las tareas principales de investigación que se definió serían las siguientes:
     
         Nro. Objetivo Específico & Actividades & Recursos Necesarios &Resultados a obtener \\ \hline 
     
-         1& Investigación de la implementación de las técnicas wave function collapse y seeding &  & Diseño de algoritmos a usar\\ \hline 
+         1& Investigación de la implementación de algoritmos de generación procedural y seeding &  & Diseño de algoritmos a usar\\ \hline 
     
          2& Investigación del motor a usar y herramientas para generar mapas & lenguaje de programación compatible con el motor & Diseño de uso en el motor y herramientas a usar de este\\ \hline 
          
