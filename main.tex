@@ -1,66 +1,105 @@
-\documentclass[11pt,letterpaper]{book}
+\documentclass[12pt,letterpaper]{book}
 
-% Paquetes
-\usepackage[ left=3cm, right=2cm, top=2cm, bottom=2cm]{geometry}
-\usepackage[spanish]{babel}
-%\usepackage[T1]{fontenc}
+% =================================================================
+% CONFIGURACION BaSICA
+% =================================================================
+
+% Idioma y Codificación
 \usepackage[utf8]{inputenc}
-%\usepackage{setspace}
-\usepackage{xcolor}
-\usepackage{titlesec}
-\usepackage[Lenny]{fncychap}
-\usepackage{hyperref}
-\usepackage{fancyhdr} % Para encabezados y pies de página
-\usepackage{tocloft}
+\usepackage[spanish,es-tabla]{babel}
 
+% Márgenes
+\usepackage[left=3cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 
-% Paquete para evitar pies de página, encabezados y numeración por defecto.
-\usepackage{emptypage}
-% Fuente Arial
-\usepackage{helvet}
+% Fuente (Arial-like)
 \renewcommand{\familydefault}{\sfdefault}
 
-% Paquetes para el uso de fórmulas matemáticas.
+% Espaciado
+\usepackage{setspace} % Para control de interlineado 
+\usepackage{parskip} % Elimina sangría y usa espacio entre párrafos.
+
+% Matematicas
 \usepackage{amsmath, amsthm, amssymb}
 
-% paquetes para figuras
+% =================================================================
+% FORMATO Y ESTILO 
+% =================================================================
+
+\usepackage{xcolor} % Necesario para definir colores
+
+% Hipervínculos 
+\usepackage{hyperref} 
+% Aquí se asegura que las referencias sean negras y sin recuadros de color.
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,    % Color de los enlaces internos (secciones, páginas)
+	citecolor=black,    % Color de las citas bibliográficas
+	urlcolor=black,     % Color de los enlaces URL
+}
+
+% Encabezados y capítulos
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[Lenny]{fncychap}
+\usepackage{emptypage} % Para páginas vacías sin encabezados ni numeración
+
+% =================================================================
+%FIGURAS Y TABLAS
+% =================================================================
+
+% Figuras
 \usepackage{graphicx}
 \usepackage{caption}
-\usepackage{array} % required for text wrapping in tables
 \usepackage{float}
 
-% formato bibliografia
-\usepackage{natbib}
-\usepackage{url}
-% Paquete para el espaciado automático entre párrafos
-% ya no es necesario el "//"
-\usepackage{parskip}
+% Tablas
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+\UseTblrLibrary{siunitx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{makecell} 
 
+% Bibliografía
+\usepackage[round,authoryear]{natbib}
+\usepackage{appendix} 
+
+
+% =================================================================
+% INDICES
+% =================================================================
+
+%\usepackage{textcase} % permite usar el comando seguro \MakeUppercase en lugar del comando de bajo nivel \uppercase
+\usepackage{tocloft}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% aqui comienza el documento %%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\include{config/config}
-
-% caratula/portada
-\include{preliminares/portada}
-
-% indices
-\frontmatter
-    \include{preliminares/dedicatoria}
-    \include{preliminares/agradecimientos}
-    \include{preliminares/fichaResumen}
-    \tableofcontents
-    \listoffigures
-    \listoftables
-    
-\mainmatter
-    \include{cuerpo_del_trabajo/1.introduccion}
-    \include{cuerpo_del_trabajo/2.marco_teorico}
-    \include{cuerpo_del_trabajo/3.marco_de_aplicacion}
-    \include{cuerpo_del_trabajo/4.desarrollo_del_proyecto}
-    \include{cuerpo_del_trabajo/5.conclusiones_y_recomendaciones}
- 
-\backmatter
-    \include{bibliografia}
-    \include{anexos/anexos}
-
+	\include{config/config}
+	
+	% portada
+	\include{preliminares/portada}
+	
+	% indices
+	\frontmatter
+	\include{preliminares/dedicatoria}
+	\include{preliminares/agradecimientos}
+	\include{preliminares/fichaResumen}
+	\tableofcontents
+	\clearpage
+	\listoffigures
+	\clearpage
+	\listoftables
+	
+	\mainmatter
+	    \include{cuerpo_del_trabajo/1.introduccion}
+	\include{cuerpo_del_trabajo/2.marco_teorico}
+	\include{cuerpo_del_trabajo/3.marco_de_aplicacion}
+	\include{cuerpo_del_trabajo/4.desarrollo_del_proyecto}
+	\include{cuerpo_del_trabajo/5.conclusiones_y_recomendaciones}
+	
+	\backmatter
+	\include{bibliografia}
+	\appendix
+	\begin{appendices}
+		\include{anexos}
+	\end{appendices}
 \end{document}

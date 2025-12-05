@@ -1,25 +1,37 @@
 
+\color{black}
 %formato del texto "capitulo"
 \titleformat{\chapter}[display]
-{\fontsize{14}{16}\Large\filcenter} 
-{{\chaptertitlename} \Roman{chapter}} %  
-{20pt}  % Espacio entre "Capítulo I" y el título
-{\bfseries\MakeUppercase} 
+{\bfseries\centering\fontsize{14}{16}} % Arial 14 negrita, centrado
+{\MakeUppercase{\chaptertitlename} \ \Roman{chapter}} % CAPÍTULO I
+{3pt} % Espaciado entre "Capítulo I" y el título
+{\fontsize{18}{22}\selectfont\MakeUppercase} % Título también en mayúsculas sostenidas
+\titlespacing*{\chapter}{0pt}{6pt}{6pt} % Espaciado antes y después
+
 
 % Formato de títulos y subtítulos
-\titleformat{\section}
-  {\fontsize{12}{14}\bfseries\uppercase} % Estilo del título de sección
-  {\thesection} % Etiqueta del capítulo
-  {1em} % Espacio horizontal entre la etiqueta y el título
-  {} % Código previo al título de sección
+\titleformat{\section}[hang]
+{\fontsize{12}{14}\bfseries\MakeUppercase}
+{\thesection.}
+{1em}
+{} 
 
-\titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsection}[hang]
+{\fontsize{12}{14}\bfseries}
+{\thesubsection.}
+{1em}
+{}
+
 \titleformat{\subsubsection}{\bfseries}{\thesubsubsection}{1em}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% formato indice
+%uppercase tiene conflictos,
+%este par de lineas proboca el error en main.tex en -> \tableofcontents
+%  descomentar para que en el indice se vea capitulos y secciones en mayusculas
 
-%formato indice
-\renewcommand{\cftchapfont}{\bfseries\uppercase} %capitulos
-\renewcommand{\cftsecfont}{\uppercase} % Secciones
-
+%\renewcommand{\cftchapfont}{\bfseries\uppercase} %capitulos
+%\renewcommand{\cftsecfont}{\uppercase} % Secciones
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % agrega puntos ... a los capitulos preliminares en el indice
 %\renewcommand{\cftchapdotsep}{\cftdotsep}
@@ -27,6 +39,8 @@
 % Formato de párrafo
 \setlength{\parindent}{0pt} % Sin sangría
 \setlength{\parskip}{6pt} % Espaciado entre párrafos
+\singlespacing % interlineado sencillo
+
 
 % Configuración de página
 \pagestyle{fancy} % Estilo de página fancy
@@ -37,8 +51,33 @@
 
 
 % Formato de figuras
-\captionsetup{justification=centering, font={footnotesize, sf}, labelfont={bf, sf}}
 
+\captionsetup[figure]{justification=raggedright,singlelinecheck=false}
+% Configuración de la alineación de los títulos a la izquierda
+\captionsetup[table]{justification=raggedright, singlelinecheck=false}
+%\renewcommand{\tablename}{}
+\renewcommand{\arraystretch}{1.2} % Aumentar el espacio entre las filas de las tablas
 
 % Configuracion del caption
-\captionsetup[table]{skip=4mm}
+%\captionsetup[table]{skip=4mm}
+
+\captionsetup{
+	labelfont=bf,
+	justification=raggedright, % Alinea el texto a la izquierda
+	singlelinecheck=false,
+	font=small
+}
+
+% Para agregar Bookmarks de imágenes y tablas
+\makeatletter
+\newcommand{\listoffiguresbookmarks}{%
+	\pdfbookmark[0]{\listfigurename}{listoffiguresbookmark}
+	\bookmarksetup{level=1}
+	\@starttoc{lofb}
+}
+\newcommand{\listoftablesbookmarks}{%
+	\pdfbookmark[0]{\listtablename}{listoftablesbookmark}
+	\bookmarksetup{level=1}
+	\@starttoc{lotb}
+}
+\makeatother
